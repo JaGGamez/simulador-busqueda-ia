@@ -1,6 +1,6 @@
 # Simulador Interactivo y Comparativo de Algoritmos de Búsqueda
 
-Visualizador animado de algoritmos de búsqueda sobre cuadrículas de costo variable, construido con Python y pygame. Permite comparar A* y Optimización por Colonia de Hormigas (ACO) en tiempo real desde la terminal.
+Este es un visualizador animado de algoritmos de búsqueda sobre cuadriculas de costo variable, construido con Python y pygame. Permite comparar A* y Optimización por Colonia de Hormigas (ACO) en tiempo real desde la terminal.
 
 ---
 
@@ -72,7 +72,7 @@ python main.py --mapa mapas/mapa_complejo.txt --algoritmo aco --hormigas 30 --it
 
 ## Formato de los mapas
 
-Los mapas son archivos `.txt` con valores enteros separados por espacios, uno por celda:
+Los mapas son creados apartir de archivos `.txt` con valores enteros separados por espacios, uno por celda:
 
 | Valor | Significado | Color en pantalla |
 |---|---|---|
@@ -119,7 +119,7 @@ Búsqueda informada con función de costo `f(n) = g(n) + h(n)`.
 
 ### ACO — Colonia de Hormigas (`--algoritmo aco`)
 
-Metaheurística bio-inspirada basada en el comportamiento de hormigas reales.
+Este algoritmo es bio-inspirada basado en el comportamiento de hormigas reales.
 
 - Cada hormiga construye un camino de inicio a destino usando **selección probabilística por ruleta** ponderada por feromona (`τ^α`) y heurística (`η^β = (1/costo)^β`).
 - Al final de cada iteración: las feromonas se **evaporan** globalmente (`×(1−ρ)`) y las hormigas que llegaron al destino depositan feromona proporcional a `Q / costo_camino`.
@@ -153,7 +153,7 @@ Frame N+1: pygame repinta con el estado recibido
 Frame N+2: next(gen) → ...
 ```
 
-Esto significa que la animación no usa hilos ni temporizadores artificiales: la velocidad visual es simplemente la de ejecución del algoritmo.
+Esto significa que la animacion se basa en la velocidad visual es simplemente la de ejecución del algoritmo.
 
 ---
 
