@@ -8,6 +8,12 @@ Protocolo de yield:
   Mientras busca  → yield ("buscando", visitados, frontera, camino_parcial, metricas)
   Al encontrar    → yield ("encontrado", visitados, frontera, camino, metricas)
   Sin solución    → yield ("sin_solucion", visitados, set(), [], metricas)
+
+Recordar qu yield sirve como alternativa al return clasico. El yield permite hacer un return, pero paso a paso. 
+Un return normal devuelve y calcula todo antes del return, el yield va paso a paso a traves del next().
+Por la naturaleza del proyecto, donde se usa pygame, es necesario usar el yield para visualizar el paso a paso 
+de la solucion de la busqueda inteligente, en este caso con el A*. De otra manera la animacion no se apreciaria como un paso a paso de busqueda.
+  
 """
 
 from __future__ import annotations
